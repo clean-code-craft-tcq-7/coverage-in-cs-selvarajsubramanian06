@@ -1,4 +1,5 @@
 ﻿using System;
+using static TypewiseAlert.TypeWiseEnums;
 
 namespace TypewiseAlert
 {
@@ -9,21 +10,26 @@ namespace TypewiseAlert
       public CoolingType coolingType;
       public string brand;
     }
-    public static void checkAndAlert(
-        AlertTarget alertTarget, BatteryCharacter batteryChar, double temperatureInC) {
-
-      BreachType breachType = classifyTemperatureBreach(
-        batteryChar.coolingType, temperatureInC
-      );
-
-      switch(alertTarget) {
-        case AlertTarget.TO_CONTROLLER:
-          sendToController(breachType);
-          break;
-        case AlertTarget.TO_EMAIL:
-          sendToEmail(breachType);
-          break;
-      }
+    public static bool checkAndAlert(
+        AlertTarget alertTarget, BatteryCharacter batteryChar, double temperatureInC) 
+        {
+            try
+            {
+              BreachType breachType = ClassifyTempBreach.classifyTemperatureBreach(
+              batteryChar.coolingType, temperatureInC);
+              if (alertTarget == AlertTarget.TO_CONTROLLER)
+              {
+                return ActionController.sendToController(breachType);
+              }
+              else
+              {
+                return ActionEmail.sendToEmail(breachType);
+              }
+            }
+            catch(Exception)
+            {
+              return false;
+            }      
+        }
     }
-  }
 }
