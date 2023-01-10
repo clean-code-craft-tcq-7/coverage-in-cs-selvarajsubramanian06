@@ -1,5 +1,5 @@
 using System;
-using static TypewiseAlert.TypeWiseEnums
+using static TypewiseAlert.TypeWiseEnums;
 
 namespace TypewiseAlert
 {
