@@ -3,7 +3,7 @@ using static TypewiseAlert.TypeWiseEnums;
 
 namespace TypewiseAlert
 {
-    public class ActionEmai;
+    public class ActionEmail;
     {
      public static void sendToEmail(BreachType breachType) {
       string recepient = "a.b@c.com";
