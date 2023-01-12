@@ -3,7 +3,7 @@ using static TypewiseAlert.TypeWiseEnums;
 
 namespace TypewiseAlert
 {
-    public class CoolingTypeM
+    public class CoolingTypeParam
     {
         public CoolingType Cooltype;
         public double LowerLimit;
