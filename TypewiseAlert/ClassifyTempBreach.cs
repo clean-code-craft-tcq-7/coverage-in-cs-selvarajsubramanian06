@@ -22,7 +22,7 @@ namespace TypewiseAlert
             upperLimit = 40;
             break;*/
         }
-        return inferBreach(temperatureInC, lowerLimit, upperLimit);
+        return InferBreach.inferBreach(temperatureInC, lowerLimit, upperLimit);
       }
     }
 }    
