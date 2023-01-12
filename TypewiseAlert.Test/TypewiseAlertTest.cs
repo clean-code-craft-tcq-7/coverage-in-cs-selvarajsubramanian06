@@ -1,5 +1,6 @@
 using System;
 using Xunit;
+using static TypewiseAlert.TypeWiseEnums;
 
 namespace TypewiseAlert.Test
 {
