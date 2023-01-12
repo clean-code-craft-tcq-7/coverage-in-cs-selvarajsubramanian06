@@ -1,3 +1,6 @@
+using System;
+using static TypewiseAlert.TypeWiseEnums;
+
 namespace TypewiseAlert
 {
     public class EmailParam
