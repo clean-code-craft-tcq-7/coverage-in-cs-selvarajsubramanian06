@@ -5,6 +5,13 @@ namespace TypewiseAlert
 {
     public class ActionEmail;
     {
+        static MyStruct[] myArray = 
+            new MyStruct[]{
+                new MyStruct() { id = 1, label = "1" },
+                new MyStruct() { id = 2, label = "2" },
+                new MyStruct() { id = 3, label = "3" }
+            };
+        
      public static void sendToEmail(BreachType breachType) {
       string recepient = "a.b@c.com";
       switch(breachType) {
