@@ -4,9 +4,9 @@ namespace TypewiseAlert
 {
     public static class Constants
     {
-      const string MailRecipient = "ab@c.com";
-      const string EmailMessage_Low = "Hi, the temperature is too low"; 
+      public const string MailRecipient = "ab@c.com";
+      public const string EmailMessage_Low = "Hi, the temperature is too low"; 
         
-      const double PassiveLowLimit = 0;
+      public const double PassiveLowLimit = 0;
     }
 }
