@@ -7,6 +7,6 @@ namespace TypewiseAlert
     {
         public CoolingType Cooltype;
         public double LowerLimit;
-        public double Upperlimit;
+        public double UpperLimit;
     }
 }
