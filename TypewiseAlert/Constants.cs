@@ -6,5 +6,7 @@ namespace TypewiseAlert
     {
       const string MailRecipient = "ab@c.com";
       const string EmailMessage_Low = "Hi, the temperature is too low"; 
+        
+      const double PassiveLowLimit = 0;
     }
 }
