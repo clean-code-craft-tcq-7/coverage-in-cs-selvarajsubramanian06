@@ -13,7 +13,7 @@ namespace TypewiseAlert
             new MyStruct() { id = 3, label = "3" }
             };
         */
-     public static void sendToEmail(BreachType breachType) {
+           public static void sendToEmail(BreachType breachType) {
          
          //breachType sol = breachType.NORMAL;
             List<EmailParam> listOfItems = new List<EmailParam>();
@@ -38,6 +38,6 @@ namespace TypewiseAlert
           Console.WriteLine("Hi, the temperature is too high\n");
           break;*/
       }
-    }
+    
   }
 }    
