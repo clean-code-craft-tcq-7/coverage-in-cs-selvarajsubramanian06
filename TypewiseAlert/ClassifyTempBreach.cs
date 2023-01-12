@@ -1,28 +1,20 @@
 using System;
+using System.Collections.Generic;
 using static TypewiseAlert.TypeWiseEnums;
 
 namespace TypewiseAlert
 {
   public class ClassifyTempBreach{
-    public static BreachType classifyTemperatureBreach(
-          CoolingType coolingType, double temperatureInC) {
-        int lowerLimit = 0;
-        int upperLimit = 0;
-        switch(coolingType) {
-          case CoolingType.PASSIVE_COOLING:
-            lowerLimit = 0;
-            upperLimit = 35;
-            break;
-          /*case CoolingType.HI_ACTIVE_COOLING:
-            lowerLimit = 0;
-            upperLimit = 45;
-            break;
-          case CoolingType.MED_ACTIVE_COOLING:
-            lowerLimit = 0;
-            upperLimit = 40;
-            break;*/
-        }
-        return InferBreach.inferBreach(temperatureInC, lowerLimit, upperLimit);
+    public static BreachType classifyTemperatureBreach(CoolingType coolingType, double temperatureInC) 
+    {
+        List<CoolingTypeParam> listOfCoolItems = new List<CoolingTypeParam>();
+        listOfCoolItems.Add(new CoolingTypeParam() { Cooltype = CoolingType.PASSIVE_COOLING, LowerLimit = 0, UpperLimit = 35 });
+        listOfCoolItems.Add(new CoolingTypeParam() { Cooltype = CoolingType.HI_ACTIVE_COOLING, LowerLimit = 0, UpperLimit = 45 });
+        listOfCoolItems.Add(new CoolingTypeParam() { Cooltype = CoolingType.MED_ACTIVE_COOLING, LowerLimit = 0, UpperLimit = 40 });
+
+        CoolingTypeParam OutputValue = listOfCoolItems.Find(m => m.Cooltype == coolingType);        
+      
+        return InferBreach.inferBreach(temperatureInC, OutputValue.LowerLimit, OutputValue.UpperLimit);
       }
     }
 }    
