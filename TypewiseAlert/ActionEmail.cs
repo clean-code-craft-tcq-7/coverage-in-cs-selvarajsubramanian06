@@ -11,7 +11,7 @@ namespace TypewiseAlert
         try 
             {
             List<EmailParam> listOfItems = new List<EmailParam>();
-            listOfItems.Add(new EmailParam() { Breach = BreachType.TOO_LOW, Recipient = MailRecipient, EmailMessage = EmailMessage_Low });
+            listOfItems.Add(new EmailParam() { Breach = BreachType.TOO_LOW, Recipient = Constants.MailRecipient, EmailMessage = Constants.EmailMessage_Low });
             listOfItems.Add(new EmailParam() { Breach = BreachType.TOO_HIGH, Recipient = "ab@d.com", EmailMessage = "Hi, the temperature is too high" });
             listOfItems.Add(new EmailParam() { Breach = BreachType.NORMAL, Recipient = "ab@e.com", EmailMessage = "Hi, the temperature is normal" });
 
