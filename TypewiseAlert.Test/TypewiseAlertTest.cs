@@ -31,8 +31,8 @@ namespace TypewiseAlert.Test
       Assert.True(ActionEmail.sendToEmail(TypeWiseEnums.BreachType.TOO_LOW));
 /*
       Assert.True(ActionController.sendToController(TypeWiseEnums.BreachType.NORMAL));
-      Assert.True(ActionController.sendToController(TypeWiseEnums.BreachType.TOO_HIGH));
-      Assert.True(ActionController.sendToController(TypeWiseEnums.BreachType.TOO_LOW));*/
+      Assert.True(ActionController.sendToController(TypeWiseEnums.BreachType.TOO_HIGH));*/
+      Assert.True(ActionController.sendToController(TypeWiseEnums.BreachType.TOO_LOW));
     }
   }
 }
