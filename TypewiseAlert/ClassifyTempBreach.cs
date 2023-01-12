@@ -13,14 +13,14 @@ namespace TypewiseAlert
             lowerLimit = 0;
             upperLimit = 35;
             break;
-          case CoolingType.HI_ACTIVE_COOLING:
+          /*case CoolingType.HI_ACTIVE_COOLING:
             lowerLimit = 0;
             upperLimit = 45;
             break;
           case CoolingType.MED_ACTIVE_COOLING:
             lowerLimit = 0;
             upperLimit = 40;
-            break;
+            break;*/
         }
         return inferBreach(temperatureInC, lowerLimit, upperLimit);
       }
